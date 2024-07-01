@@ -28,6 +28,7 @@ def sort_operations(operations):
     return sorted(operations, key=lambda operation: operation.get("date"), reverse=True)
 
 
+
 def get_last_operations(operations, count):
     """
     Получение среза последних операции
@@ -55,4 +56,3 @@ def convert_payment_info(payment):
         card_info = payment.replace(payment_info, "")
         payment_info = payment_info[:-10] + "** **** " + payment_info[12:]
         return f'{card_info} {payment_info[:4]} {payment_info[4:]}'
-
